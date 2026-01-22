@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet],
-  templateUrl: './app.html',
+  templateUrl: './app.html',   // connects with app.html
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('angular-tut');
+  name = 'Zeel Barot';
+  x = 10;
+  y = 20;
+  signI = '{{}}';
 }
