@@ -1,3 +1,16 @@
+## Learning Purpose
+
+This repository is created to learn Angular fundamentals step-by-step, including:
+- Components
+- Interpolation
+- Data Binding
+- Directives
+- Services
+- Dependency Injection
+
+Each commit represents a learning milestone.
+
+
 # AngularTut
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
