@@ -1,17 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { UsersComponent } from "./components/users/users";
+import { Component, signal } from '@angular/core';
+import { Variables } from './components/variables/variables';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Login, UsersComponent],
+  imports: [Variables],
   templateUrl: './app.html',   // connects with app.html
   styleUrl: './app.css'
 })
 export class App {
-  name = 'Zeel Barot';
-  x = 10;
-  y = 20;
-  signI = '{{}}';
+  protected title = signal("Angular21 Tutorial");
 }
