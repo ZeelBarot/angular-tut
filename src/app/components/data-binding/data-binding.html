@@ -10,5 +10,18 @@
             <td><p [class]="className">This is Para</p></td>
             <td><input [type]="inputType"></td>
         </tr>
+        <tr>
+            <td>
+                <button (click)="showWelcomeMsg()">Show Message</button>
+            </td>
+            <td>
+                <select (change)="onCityChange()">
+                    <option>Pune</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                    <option>Bangalore</option>
+                </select>
+            </td>
+        </tr>
     </body>
 </table>
