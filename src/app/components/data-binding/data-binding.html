@@ -23,5 +23,17 @@
                 </select>
             </td>
         </tr>
+        <tr>
+            <td>
+                <input type="text" [(ngModel)]="courseName">
+            </td>
+            <td>
+                <button (click)="changeCourseName('Java')">Change Java</button>
+            </td>
+            <td>
+                <button (click)="changeCourseName('Dot Net')">Change DotNet</button>
+            </td>
+            
+        </tr>
     </body>
 </table>
