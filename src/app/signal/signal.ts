@@ -22,6 +22,10 @@ export class Signal   {
 
   // ************* SIGNAL VARIABLE *************
   courseName = signal ('Angular 21');
+  rollNo = signal (101);
+  student = signal ({name: 'Zeel', age: 21, city: 'Ahmedabad'});
+  cityList = signal (['Ahmedabad', 'Surat', 'Vadodara','Rajkot','Bhavnagar']);
+
   constructor(){
     console.log(`Before `+ this.courseName());
     
@@ -29,5 +33,9 @@ export class Signal   {
       this.courseName.set("React JS");
       console.log(`After `+ this.courseName());
     }, 3000);
+  }
+
+  changeCourseName(){
+    this.courseName.set("Java");
   }
 }
