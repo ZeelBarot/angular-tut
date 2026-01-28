@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './data-binding.css',
 })
 export class DataBinding {
+  courseName = "Angular v-21 Full Course";
+  cityName = "Ahmedabad";
+  
+  className = "primary";
 
+  inputType = "date"; // Dynamic Attribute Binding
 }
