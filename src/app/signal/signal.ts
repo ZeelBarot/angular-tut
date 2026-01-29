@@ -24,7 +24,7 @@ export class Signal   {
   courseName = signal ('Angular 21');
   rollNo = signal (101);
   student = signal ({name: 'Zeel', age: 21, city: 'Ahmedabad'});
-  cityList = signal (['Ahmedabad', 'Surat', 'Vadodara','Rajkot','Bhavnagar']);
+  cityList = signal (['Ahmedabad', 'Surat', 'Vadodara','Rajkot']);
 
   constructor(){
     console.log(`Before `+ this.courseName());
