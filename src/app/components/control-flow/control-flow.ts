@@ -1,9 +1,10 @@
+import { NgClass } from '@angular/common';
 import { Component, signal, Signal, WritableSignal} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-control-flow',
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass],
   templateUrl: './control-flow.html',
   styleUrl: './control-flow.css',
 })

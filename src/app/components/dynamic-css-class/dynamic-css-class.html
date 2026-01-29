@@ -1,1 +1,22 @@
-<p>dynamic-css-class works!</p>
+<div class="row">
+    <div class="col-3">
+        <div class="p-4" [ngClass]="myClassName">
+            Div-1
+        </div>
+    </div>
+    <div class="col-2">
+        <input type="text" class="form-control" [(ngModel)]="myClassName">
+    </div>
+    <div class="col-3">
+        <button class="btn" (click)="isActive = !isActive" [ngClass]="isActive == true ? 'btn-success':'btn-danger'">Status</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-3">
+        <p [ngClass]="productPrice > 500 ? 'text-danger' : 'text-success'"> Price $ {{productPrice}} </p>
+    </div>
+    <div class="col-2">
+        <input type="number" class="form-control" [(ngModel)]="productPrice">
+    </div>
+</div>

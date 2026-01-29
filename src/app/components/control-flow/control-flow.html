@@ -86,12 +86,9 @@
                     <td>{{item.name}}</td>
                     <td>{{item.city}}</td>
                     <td>
-                        @if(item.isActive == true){
-                            <strong class="text-success">Active</strong>
-                        }
-                        @else{
-                            <strong class="text-danger">Inactive</strong>
-                        }
+                        <strong [ngClass]="item.isActive == true ? 'text-success' : 'text-danger'">
+                            {{item.isActive == true ? 'Active' : 'Inactive'}}
+                        </strong>
                     </td>
                 </tr>
                 }
