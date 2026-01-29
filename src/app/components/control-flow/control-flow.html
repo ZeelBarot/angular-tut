@@ -1,1 +1,101 @@
-<p>control-flow works!</p>
+<div class="row">
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isOfferCodeAvailable"> Do you have offer code?
+        <br>
+    </div>
+
+    @if(isOfferCodeAvailable == true){
+    <div class="col-3">
+        <input type="text" class="form-control" placeholder="Enter Offer Code">
+    </div>
+    }
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-3">
+        @if(isSuccessDivVisible() == true){
+        <div class="bg-success p-3">
+            Success Div
+        </div>
+        }
+        <div class="bg-danger p-3">
+            Error Div
+        </div>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-success" (click)="toggleDivVisibility()">Toggle</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+    <div class="col-3">
+        <input type="text" placeholder="%" [(ngModel)]="studentTotalMarks" class="form-control">
+    </div>
+    <div class="col-3">
+        @if(studentTotalMarks >= 70){
+        <strong class="text-success">Student Has A Grade</strong>
+        } @else if(studentTotalMarks >= 50 && studentTotalMarks < 70){ <span class="text-primary"> Student Has B Grade
+            </span>
+            } @else if(studentTotalMarks >= 35 && studentTotalMarks < 50){ <span class="text-secondary"> Student Has C
+                Grade </span>
+                } @else{
+                @if(studentTotalMarks == 0){
+                <span class="text-secondary"> Enter Marks </span>
+                } @else{
+                <strong class="text-danger"> Student Has Failed </strong>
+                }
+                }
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-3">
+        <ul>
+            @for(item of offerList; track $index){
+            <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-8">
+        @for(item of productCategoryList; track $index){
+        <button class="btn btn-primary mx-2">{{item}}</button>
+        }
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-bordered">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(item of employeeList; track $index){
+                <tr>
+                    <td>{{$index + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.city}}</td>
+                    <td>
+                        @if(item.isActive == true){
+                            <strong class="text-success">Active</strong>
+                        }
+                        @else{
+                            <strong class="text-danger">Inactive</strong>
+                        }
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
