@@ -1,10 +1,10 @@
-import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgClass, NgStyle } from '@angular/common';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-css-class',
-  imports: [NgClass,FormsModule],
+  imports: [NgClass, FormsModule, NgStyle],
   templateUrl: './dynamic-css-class.html',
   styleUrl: './dynamic-css-class.css',
 })
@@ -15,4 +15,21 @@ export class DynamicCssClass {
   isActive: boolean = false;
 
   productPrice = 600;
+
+  divBackColor: string = 'lightblue';
+
+  myCss = {
+    'background-color': 'black',
+    'font-size': '35px',
+    'color': 'white'
+  }
+
+  isSidePanel = signal(true);
+
+  openSidePanel() {
+    this.isSidePanel.set(true);
+  }
+  closeSidePanel() {
+    this.isSidePanel.set(false);
+  }
 }

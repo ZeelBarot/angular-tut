@@ -1,22 +1,93 @@
 <div class="row">
-    <div class="col-3">
-        <div class="p-4" [ngClass]="myClassName">
-            Div-1
+    <div [ngClass]="isSidePanel() == true ? 'col-8' : 'col-12'">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="row">
+                    <div class="col-8">
+                        List
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-success" (click)="openSidePanel()">Open</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="p-4" [ngClass]="myClassName">
+                            Div-1
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" [(ngModel)]="myClassName">
+                    </div>
+                    <div class="col-3">
+                        <button class="btn" (click)="isActive = !isActive"
+                            [ngClass]="isActive == true ? 'btn-success':'btn-danger'">Status</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <p [ngClass]="productPrice > 500 ? 'text-danger' : 'text-success'"> Price $ {{productPrice}}
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <input type="number" class="form-control" [(ngModel)]="productPrice">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-2">
-        <input type="text" class="form-control" [(ngModel)]="myClassName">
+    @if (isSidePanel() == true){
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-primary">
+                <div class="row">
+                    <div class="col-8">
+                        Form
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-success" (click)="closeSidePanel()">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="p-4" [ngStyle]="{'background-color': divBackColor}">
+                            Div-2
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" [(ngModel)]="divBackColor">
+                    </div>
+                    <div class="col-3">
+                        <button class="btn" (click)="isActive = !isActive"
+                            [ngClass]="isActive == true ? 'btn-success':'btn-danger'">Status</button>
+                    </div>
+                    <div class="col-3" [ngStyle]="myCss">
+                        Div94
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <div [class]="myClassName + ' p-4'">
+                            Div-1
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" [(ngModel)]="myClassName">
+                    </div>
+                    <div class="col-3">
+                        <button class="btn" (click)="isActive = !isActive"
+                            [ngClass]="isActive == true ? 'btn-success':'btn-danger'">Status</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-3">
-        <button class="btn" (click)="isActive = !isActive" [ngClass]="isActive == true ? 'btn-success':'btn-danger'">Status</button>
-    </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-3">
-        <p [ngClass]="productPrice > 500 ? 'text-danger' : 'text-success'"> Price $ {{productPrice}} </p>
-    </div>
-    <div class="col-2">
-        <input type="number" class="form-control" [(ngModel)]="productPrice">
-    </div>
+    }
+
 </div>
