@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-user-master',
+  selector: 'user-master',
   imports: [FormsModule],
   templateUrl: './user-master.html',
   styleUrl: './user-master.css',
