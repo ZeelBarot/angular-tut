@@ -5,6 +5,7 @@ import { Variables } from './components/variables/variables';
 import { NotFound } from './not-found/not-found';
 import { ControlFlow } from './components/control-flow/control-flow';
 import { DynamicCssClass } from './components/dynamic-css-class/dynamic-css-class';
+import { UserMaster } from './components/user-master/user-master';
 
 export const routes: Routes = [
     {
@@ -31,6 +32,10 @@ export const routes: Routes = [
     {
         path: 'dynamic-css-class',
         component: DynamicCssClass
+    },
+    {
+        path: 'app-user-master',
+        component: UserMaster
     },
     {
         path: '**',
