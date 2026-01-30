@@ -15,6 +15,6 @@ export class App {
   protected currentRoute = signal('');
 
   constructor() {
-    // This will be updated  by routerLinkActive
+    
   }
 }
