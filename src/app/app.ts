@@ -12,4 +12,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = signal("Angular21 Tutorial");
+  protected currentRoute = signal('');
+
+  constructor() {
+    // This will be updated  by routerLinkActive
+  }
 }
