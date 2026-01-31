@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, signal, Signal, WritableSignal} from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Master } from '../../service/master';
 
 @Component({
   selector: 'app-control-flow',
@@ -40,9 +41,14 @@ export class ControlFlow {
     {name: 'FFF', city: 'Kolkata', isActive: false},
     {name: 'GGG', city: 'Delhi', isActive: false},
     {name: 'HHH', city: 'Jaipur', isActive: false}
-  ]
+  ];
+
+  constructor(private masterSrv: Master){
+    const result = masterSrv.addTwoNum(10, 20)
+  }
 
   toggleDivVisibility(){
+    debugger;
     this.isSuccessDivVisible.set(!this.isSuccessDivVisible());
   }
 }
