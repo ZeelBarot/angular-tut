@@ -1,4 +1,4 @@
-# 📅 Day 10 – Real Project Setup & Dependency Understanding
+# 📅 Day 11 – Real Project Setup & Dependency Understanding
 **Date:** 03/02/2026  
 **Time Wrapped:** 6:35 PM  
 
